@@ -11,4 +11,8 @@ ArtFixAssist, ArtFix assistant can help you and chat with you.
 * Memory.
 * Open sourse.
 * Private.
-* clever.
+* Clever.
+
+Project by Arthur Stepanyan: https://github.com/ArthurStep.
+
+Support project: https://ko-fi.com/arthurstep.
