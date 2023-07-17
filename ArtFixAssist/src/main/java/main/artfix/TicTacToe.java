@@ -1,5 +1,7 @@
 package main.artfix;
 
+import java.util.Scanner;
+
 public class TicTacToe {
     public static void startTic(){
         TicTacToe.gameRestart();
@@ -7,7 +9,8 @@ public class TicTacToe {
         while (true) {
             System.out.println(" ");
             System.out.print("Type Your number: ");
-            String TicTacToeScan = Config.scan.nextLine();
+            Scanner scanForTicTacToeIn = new Scanner(System.in);
+            String TicTacToeScan = scanForTicTacToeIn.nextLine();
 
             switch (TicTacToeScan) {
                 case "1":

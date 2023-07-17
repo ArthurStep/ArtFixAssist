@@ -21,7 +21,7 @@ public class Application {
             usernameNow = FileIng.ReadData;
 
             if (usernameNow.equals("noName")) {
-                System.out.println("You Don't Have A Installed Name For A Set Of Type Set Name, Thanks.");
+                System.out.println("You don't have a installed name for a set of type set name, Thanks.");
                 System.out.println("Hi, Im ArtFix.");
 
             } else {
@@ -38,7 +38,8 @@ public class Application {
             while (true) {
                 System.out.println(" ");
                 System.out.print("Type: ");
-                ask = Config.scan.nextLine();
+                Scanner scanForAppIn = new Scanner(System.in);
+                ask = scanForAppIn.nextLine();
                 FileWriter txt = new FileWriter("app_files/historylog.txt", true);
                 txt.write(ask + ", ");
                 txt.close();
@@ -183,9 +184,11 @@ public class Application {
                             System.out.println("1) TicTacToe.");
                             System.out.println("2) Remember the number.");
                             System.out.print("Type: ");
-                            String gameCheck = Config.scan.nextLine();
+                            Scanner scanForGameMenuIn = new Scanner(System.in);
+                            String gameCheck = scanForGameMenuIn.nextLine();
                             switch (gameCheck) {
                                 case "1":
+                                    //TicTacToe
                                     TicTacToe.startTic();
                                     break;
                                 case "2":
@@ -239,7 +242,8 @@ public class Application {
 
                     case "are you ready", "Are you ready", "Are you ready?", "are you ready?":
                         System.out.print("System: For what? : ");
-                        String areYouReady = Config.scan.nextLine();
+                        Scanner scanForAreYouReadyIn = new Scanner(System.in);
+                        String areYouReady = scanForAreYouReadyIn.nextLine();
                         System.out.println("Yes, I'm ready " + areYouReady + ".");
                         break;
 
@@ -284,7 +288,6 @@ public class Application {
                             System.out.println("Thank you, but while you were thinking, I already counted, your answer is incorrect.");
                             System.out.println("Thanks anyway.");
                         }
-
                         break;
 
                     case "who created ArtFix bot", "Who made you", "who made you", "Who create you":
@@ -294,19 +297,16 @@ public class Application {
 
                     case "set name", "Set name":
                         System.out.print("Enter Your name: ");
-                        String setNameData = Config.scan.nextLine();
-                        System.out.println("Setting.");
+                        Scanner scanForSetNameIn = new Scanner(System.in);
+                        String setNameData = scanForSetNameIn.nextLine();
+                        System.out.println("Setting!");
                         FileIng.write("username", setNameData);
-                        System.out.println("Setting..");
-                        Thread.sleep(500);
-                        System.out.println("Setting...");
                         usernameNow = setNameData;
-                        Thread.sleep(300);
                         System.out.println("Done!");
                         break;
 
 
-                    case "goodbye", "Goodbye", "goodBye", "GoodBye", "Bye", "bye", "exit", "Exit", "Kill", "kill":
+                    case "goodbye", "Goodbye", "goodBye", "GoodBye", "Bye", "bye", "exit", "Exit", "stop", "Stop":
                         System.out.println("Have a nice day." + "\n" + "Bye.");
                         System.exit(0);
                         break;
@@ -431,7 +431,8 @@ public class Application {
 
                     case "admin":
                         System.out.print("Type Password: ");
-                        String adminPasswordScan = Config.scan.nextLine();
+                        Scanner scanForAdminPasswordIn = new Scanner(System.in);
+                        String adminPasswordScan = scanForAdminPasswordIn.nextLine();
                         if (adminPasswordScan.equals("yesdoit")) {
                             System.out.println(" ");
                             System.out.println("Release = Clear All Logs Reset Name.");
@@ -441,7 +442,8 @@ public class Application {
                             System.out.println(" ");
 
                             System.out.print("Enter Command: ");
-                            String adminCommand = Config.scan.nextLine();
+                            Scanner scanForAdminCommandIn = new Scanner(System.in);
+                            String adminCommand = scanForAdminCommandIn.nextLine();
 
                             switch (adminCommand) {
                                 case "release", "Release":
@@ -483,10 +485,18 @@ public class Application {
 
                     case "alarm", "Alarm", "timer", "Timer", "Set alarm", "set alarm":
                         boolean isTrueAlarm = true;
-                        System.out.println("Alarm: Example 00:00:00");
-                        System.out.print("Alarm: Set time: ");
-                        String alarmTime = Config.scan.nextLine();
-
+                        String alarmTime;
+                        while(true) {
+                            System.out.println("Alarm: Example 00:00:00");
+                            System.out.print("Alarm: Set time: ");
+                            Scanner scanForAlarmIn = new Scanner(System.in);
+                            String alarmTimeInPut = scanForAlarmIn.nextLine();
+                            alarmTime = alarmTimeInPut;
+                            System.out.println();
+                            if(!(alarmTimeInPut.equals(""))){
+                                break;
+                            }
+                        }
                         while (isTrueAlarm) {
                             DateFormat dateFormat12 = new SimpleDateFormat("HH:mm:ss");
                             Date date12 = new Date();
@@ -536,11 +546,12 @@ public class Application {
 
                     case "do you remember me", "Do you remember me":
                         System.out.println("No :(");
-                        System.out.print("Type: ");
-                        Thread.sleep(1300);
-                        System.out.println("Stop Stop! Yes :)");
-                        System.out.println("Your " + usernameNow + " Am I Right?");
-
+                        if(!usernameNow.equals("noName")) {
+                            System.out.print("Type: ");
+                            Thread.sleep(1300);
+                            System.out.println("Stop Stop! Yes :)");
+                            System.out.println("Your " + usernameNow + " am I right?");
+                        }
                         break;
 
 
@@ -584,10 +595,11 @@ public class Application {
 
                 }
             }
-        } catch (
-                Exception e) {
-            System.out.println("Program Error.");
-            System.out.println("I Start Program Again.");
+        } catch (Exception e) {
+            System.out.println("Program Error!");
+            System.out.println("Rebooting.");
+            System.out.println("Rebooting..");
+            System.out.println("Rebooting...");
             Application.start();
         }
 
@@ -596,13 +608,13 @@ public class Application {
     public static void defaultErrorMessage() {
         try {
             System.out.println(" ");
-            System.out.println("Information From Internet!");
+            System.out.println("Information from internet!");
             System.out.println(" ");
             AdditionalFunctions.Jwiki.SearchNoRes.Search(ask);
         } catch (Exception e) {
             System.out.println(" ");
             System.out.println("Cant find information about " + ask + ".");
-            System.out.println("You Can Check For Internet Connection.");
+            System.out.println("You can check for internet connection.");
         }
     }
 
