@@ -1,7 +1,5 @@
 # ArtFixAssist
-ArtFixAssist, ArtFix assistant can help you and chat with you.
-
-# Boom 🤯 💥 
+ArtFixAssist, ArtFix assistant can help and chat with you.
 
 # Features
 * Ask anything and anytime.
@@ -9,8 +7,9 @@ ArtFixAssist, ArtFix assistant can help you and chat with you.
 * Wikipedia search.
 * Local file logging.
 * Memory.
-* Open sourse.
+* Open source.
 * Private.
 * Clever.
+* etc.
 
 Project by Arthur Stepanyan: https://github.com/ArthurStep.
