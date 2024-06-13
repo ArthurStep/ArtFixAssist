@@ -100,85 +100,6 @@ public class Application {
                         System.out.println("I handle a few processes, thanks for asking.");
                         break;
 
-                    case "tell me a joke", "Tell me a joke", "Joke", "joke":
-                        double randomNumDouble11 = Math.random() * 11;
-                        int randomNum11 = (int) randomNumDouble11;
-
-                        if (randomNum11 == 0) {
-                            System.out.println("Joke: Joke 1");
-                            System.out.println("Personally, clowns don't seem funny to m" +
-                                    "e at all. To tell the truth, I'm afraid of them." + "\n" +
-                                    "I don't even know when it started. Probably when" +
-                                    " I was taken to the circus as a child and a clown killed my father.");
-                        }
-
-                        if (randomNum11 == 1) {
-                            System.out.println("Joke: Joke2");
-                            System.out.println("— Grandma, do you hear?! I don't advise you to go… " +
-                                    "The weather is at four with a minus ... And most importantly," +
-                                    "\n" + " there are absolutely no men here..." +
-                                    " Hi! Do you hear?! Many girls leave without resting…");
-                        }
-
-                        if (randomNum11 == 2) {
-                            System.out.println("My cousin just passed away prematurely. He was only 19 years old. " +
-                                    "\n" + "He was stung by a bee, the eternal enemy of the tightrope walker.");
-                        }
-
-                        if (randomNum11 == 3) {
-                            System.out.println("Joke: Joke 3");
-                            System.out.println("Grandma played with her grandson " +
-                                    "for two weeks at school. " +
-                                    "\n" + "By the end of the second week, she found " +
-                                    "out that she was doing his homework for him.");
-                        }
-
-                        if (randomNum11 == 4) {
-                            System.out.println("Joke: Joke 4");
-                            System.out.println("Yesterday, my grandmother, seeing me talking to friends on " +
-                                    "Skype, went to talk to the president on TV.");
-                        }
-
-                        if (randomNum11 == 5) {
-                            System.out.println("Joke: Joke 5");
-                            System.out.println("The husband says to his wife: — Darling, " +
-                                    "but what will you do if you see me kissing another woman? —" +
-                                    "\n" + "Well? As a faithful wife, I will visit you... In traumatology.");
-                        }
-
-                        if (randomNum11 == 6) {
-                            System.out.println("Joke: Joke 6");
-                            System.out.println("Oh, how good it is in nature! This campfire," +
-                                    " the tent, the clean air, the bear. A bear?!!");
-                        }
-
-                        if (randomNum11 == 7) {
-                            System.out.println("Joke: Joke 7");
-                            System.out.println("— Do you like to sleep? Me too. We should try it together sometime.");
-                        }
-
-                        if (randomNum11 == 8) {
-                            System.out.println("Joke: Joke 8");
-                            System.out.println("I don't understand why I should look for a job if my girlfriend has two.");
-                        }
-
-                        if (randomNum11 == 9) {
-                            System.out.println("Joke: Joke 9");
-                            System.out.println("""
-                                    The programmer calls the library.
-                                    — Hello, can I have Katya?
-                                    — It's in the archive.
-                                    — Unzip it, please. I need it urgently!""");
-                        }
-
-                        if (randomNum11 == 10) {
-                            System.out.println("Joke: Joke 10");
-                            System.out.println("- A real programmer should always go to bed either at 1:28 or" +
-                                    " 2:56... well, in extreme cases, at 5:12.\n" +
-                                    "- And get up at 10:24. Well, as a last resort, at 20:48.");
-                        }
-                        break;
-
                     case "Game", "game", "I want to play", "i want to play":
                         try {
                             System.out.println("1) TicTacToe.");
@@ -477,7 +398,7 @@ public class Application {
                         break;
 
                     case "time", "Time":
-                        DateFormat dateFormat1 = new SimpleDateFormat("HH:mm:ss");
+                        DateFormat dateFormat1 = new SimpleDateFormat("HH:mm");
                         Date date1 = new Date();
                         System.out.println(dateFormat1.format(date1));
                         break;

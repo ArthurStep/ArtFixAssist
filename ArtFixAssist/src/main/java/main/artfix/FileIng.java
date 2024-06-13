@@ -14,7 +14,7 @@ public class FileIng {
             Scanner scan = new Scanner(readwrite);
             ReadData = scan.nextLine();
         } catch (Exception e) {
-            System.out.println("File System: ERR");
+            System.out.println("File System: ERR -> Read");
 
         }
 
@@ -26,8 +26,7 @@ public class FileIng {
             readTxt.write(WhatToWrite);
             readTxt.close();
         } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("File System: ERR");
+            System.out.println("File System: ERR -> Write");
 
         }
     }
